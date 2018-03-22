@@ -19,9 +19,12 @@ namespace KeepAlive.Identity
             throw new NotImplementedException();
         }
 
+        protected virtual void Dispose(bool disposing) { }
+
         public void Dispose()
         {
-            throw new NotImplementedException();
+            //Do not change this code.  Put cleanup code in Dispose(disposing As Boolean) above.
+            Dispose(true);
         }
 
         public Task<IdentityUser> FindByIdAsync(int userId)
@@ -31,7 +34,8 @@ namespace KeepAlive.Identity
 
         public Task<IdentityUser> FindByNameAsync(string userName)
         {
-            throw new NotImplementedException();
+            IdentityUser user = new IdentityUser(1);
+            return Task.FromResult(user);
         }
 
         public Task UpdateAsync(IdentityUser user)
