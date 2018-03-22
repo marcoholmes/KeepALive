@@ -9,7 +9,8 @@ namespace KeepAlive.Identity
 {
     public class UserStore : IUserStore<IdentityUser, int>,
                              IUserPasswordStore<IdentityUser, int>,
-                             IUserEmailStore<IdentityUser, int>
+                             IUserEmailStore<IdentityUser, int>,
+                             IUserLockoutStore<IdentityUser, int>
                                 
     {
         public Task CreateAsync(IdentityUser user)
@@ -38,7 +39,8 @@ namespace KeepAlive.Identity
         public Task<IdentityUser> FindByNameAsync(string userName)
         {
             IdentityUser user = new IdentityUser(1);
-            return Task.FromResult(default(IdentityUser));
+            //return Task.FromResult(default(IdentityUser));
+            return Task.FromResult(user);
         }
 
         public Task UpdateAsync(IdentityUser user)
@@ -84,6 +86,41 @@ namespace KeepAlive.Identity
         public Task<IdentityUser> FindByEmailAsync(string email)
         {
             return Task.FromResult(default(IdentityUser));
+        }
+
+        public Task<DateTimeOffset> GetLockoutEndDateAsync(IdentityUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetLockoutEndDateAsync(IdentityUser user, DateTimeOffset lockoutEnd)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> IncrementAccessFailedCountAsync(IdentityUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task ResetAccessFailedCountAsync(IdentityUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> GetAccessFailedCountAsync(IdentityUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> GetLockoutEnabledAsync(IdentityUser user)
+        {
+            return Task.FromResult(true);
+        }
+
+        public Task SetLockoutEnabledAsync(IdentityUser user, bool enabled)
+        {
+            throw new NotImplementedException();
         }
     }
 }
