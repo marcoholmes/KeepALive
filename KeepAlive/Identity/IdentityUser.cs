@@ -8,7 +8,7 @@ using System.Web;
 
 namespace KeepAlive.Identity
 {
-    public class IdentityUser : IUser<int>, IUser<string>
+    public class IdentityUser : IUser<int>
     {
         public IdentityUser()
         {
@@ -26,6 +26,10 @@ namespace KeepAlive.Identity
 
         public string Email { get; set; }
 
-        string IUser<string>.Id => throw new NotImplementedException();
+        public string PasswordHash { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+
     }
 }
