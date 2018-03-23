@@ -24,8 +24,9 @@ namespace KeepAlive
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/css/custom_bootstrap/custom-bootstrap.css"));
+                      //,
+                      //"~/Content/site.css"
         }
     }
 }

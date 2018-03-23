@@ -1,17 +1,26 @@
-[
+﻿[
   {
-    "outputFile": "Content/bootstrap/mixins/alerts.css",
-    "inputFile": "Content/bootstrap/mixins/alerts.less",
-    "sourceMap": false
+    "outputFile": "Content/css/bootstrap/mixins/alerts.css",
+    "inputFile": "Content/less/bootstrap/mixins/alerts.less"
   },
   {
-    "outputFile": "Content/bootstrap/mixins/background-variant.css",
-    "inputFile": "Content/bootstrap/mixins/background-variant.less",
-    "sourceMap": false
+    "outputFile": "Content/css/bootstrap/mixins/background-variant.css",
+    "inputFile": "Content/less/bootstrap/mixins/background-variant.less"
   },
   {
-    "outputFile": "Content/bootstrap/mixins/border-radius.css",
-    "inputFile": "Content/bootstrap/mixins/border-radius.less",
-    "sourceMap": false
+    "outputFile": "Content/css/bootstrap/mixins/border-radius.css",
+    "inputFile": "Content/less/bootstrap/mixins/border-radius.less"
+  },
+  {
+    "outputFile": "Content/css/custom_bootstrap/custom-variables.css",
+    "inputFile": "Content/less/custom_bootstrap/custom-variables.less"
+  },
+  {
+    "outputFile": "Content/css/custom_bootstrap/custom-bootstrap.css",
+    "inputFile": "Content/less/custom_bootstrap/custom-bootstrap.less"
+  },
+  {
+    "outputFile": "Content/css/bootstrap/bootstrap.css",
+    "inputFile": "Content/less/bootstrap/bootstrap.less"
   }
 ]
