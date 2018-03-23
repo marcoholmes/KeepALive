@@ -1,0 +1,17 @@
+[
+  {
+    "outputFile": "Content/bootstrap/mixins/alerts.css",
+    "inputFile": "Content/bootstrap/mixins/alerts.less",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "Content/bootstrap/mixins/background-variant.css",
+    "inputFile": "Content/bootstrap/mixins/background-variant.less",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "Content/bootstrap/mixins/border-radius.css",
+    "inputFile": "Content/bootstrap/mixins/border-radius.less",
+    "sourceMap": false
+  }
+]
