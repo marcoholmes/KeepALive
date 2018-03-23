@@ -10,7 +10,10 @@ namespace KeepAlive.Identity
     public class UserStore : IUserStore<IdentityUser, int>,
                              IUserPasswordStore<IdentityUser, int>,
                              IUserEmailStore<IdentityUser, int>,
-                             IUserLockoutStore<IdentityUser, int>
+                             IUserLockoutStore<IdentityUser, int>,
+                             IUserTwoFactorStore<IdentityUser,int>,
+                             IUserPhoneNumberStore<IdentityUser,int>,
+                             IUserLoginStore<IdentityUser, int>
                                 
     {
         public Task CreateAsync(IdentityUser user)
@@ -55,7 +58,7 @@ namespace KeepAlive.Identity
 
         public Task<string> GetPasswordHashAsync(IdentityUser user)
         {
-            throw new NotImplementedException();
+            return Task.FromResult("AJHHjhJreLnyLHhHq8tZIj7K2SK2U2stk/sVwrX1U7KzJhONMKzFAu7GFqz3sMGqAA==");
         }
 
         public Task<bool> HasPasswordAsync(IdentityUser user)
@@ -90,7 +93,8 @@ namespace KeepAlive.Identity
 
         public Task<DateTimeOffset> GetLockoutEndDateAsync(IdentityUser user)
         {
-            throw new NotImplementedException();
+
+            return Task.FromResult(default(DateTimeOffset));
         }
 
         public Task SetLockoutEndDateAsync(IdentityUser user, DateTimeOffset lockoutEnd)
@@ -110,7 +114,7 @@ namespace KeepAlive.Identity
 
         public Task<int> GetAccessFailedCountAsync(IdentityUser user)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(0);
         }
 
         public Task<bool> GetLockoutEnabledAsync(IdentityUser user)
@@ -119,6 +123,62 @@ namespace KeepAlive.Identity
         }
 
         public Task SetLockoutEnabledAsync(IdentityUser user, bool enabled)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetTwoFactorEnabledAsync(IdentityUser user, bool enabled)
+        {
+            if (user == null)
+                throw new ArgumentNullException("user");
+
+            return Task.CompletedTask;
+        }
+
+        public Task<bool> GetTwoFactorEnabledAsync(IdentityUser user)
+        {
+            if (user == null)
+                throw new ArgumentNullException("user");
+
+            return Task.FromResult(false);
+        }
+
+        public Task SetPhoneNumberAsync(IdentityUser user, string phoneNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<string> GetPhoneNumberAsync(IdentityUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> GetPhoneNumberConfirmedAsync(IdentityUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetPhoneNumberConfirmedAsync(IdentityUser user, bool confirmed)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddLoginAsync(IdentityUser user, UserLoginInfo login)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveLoginAsync(IdentityUser user, UserLoginInfo login)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IList<UserLoginInfo>> GetLoginsAsync(IdentityUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IdentityUser> FindAsync(UserLoginInfo login)
         {
             throw new NotImplementedException();
         }
