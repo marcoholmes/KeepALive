@@ -239,6 +239,7 @@
     <Content Include="Content\css\custom_bootstrap\custom-variables.min.css">
       <DependentUpon>custom-variables.css</DependentUpon>
     </Content>
+    <Content Include="Content\images\logo-keep-alive.png" />
     <Content Include="Content\less\bootstrap\bootstrap.css">
       <DependentUpon>bootstrap.less</DependentUpon>
     </Content>
