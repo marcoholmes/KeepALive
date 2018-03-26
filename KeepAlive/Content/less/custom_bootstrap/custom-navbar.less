@@ -1,0 +1,20 @@
+@import "../bootstrap/navbar.less";
+
+.navbar .navbar-brand img {
+    height: @navbar-brand-height;
+}
+
+.navbar-brand {
+    padding: @navbar-brand-padding-vertical @navbar-padding-horizontal @navbar-brand-padding-vertical;
+}
+
+.navbar-default {
+
+    .navbar-brand {
+       
+        &:hover,
+        &:focus {
+            opacity: 0.5;
+        }
+    }
+}

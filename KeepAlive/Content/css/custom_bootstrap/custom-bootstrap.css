@@ -6729,3 +6729,10 @@ button.close {
 .navbar .navbar-brand img {
   height: 50px;
 }
+.navbar-brand {
+  padding: 0px 15px 0px;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  opacity: 0.5;
+}
