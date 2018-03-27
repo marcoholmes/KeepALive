@@ -5457,7 +5457,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-footer {
   padding: 10px 15px;
-  background-color: #f5f5f5;
+  background-color: #1a1e23;
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -6735,4 +6735,7 @@ button.close {
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   opacity: 0.5;
+}
+.panel-footer {
+  color: white;
 }
