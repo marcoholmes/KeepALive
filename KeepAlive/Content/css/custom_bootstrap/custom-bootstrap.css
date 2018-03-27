@@ -259,8 +259,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../../less/fonts/glyphicons-halflings-regular.eot');
-  src: url('../../less/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../less/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../less/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../less/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../less/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../../fonts/glyphicons-halflings-regular.eot');
+  src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -6725,6 +6725,9 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+.carousel-inner > .item {
+  min-height: 600px;
 }
 .navbar .navbar-brand img {
   height: 50px;
