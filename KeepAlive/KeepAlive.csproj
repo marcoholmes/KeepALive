@@ -239,6 +239,9 @@
     <Content Include="Content\css\custom_bootstrap\custom-variables.min.css">
       <DependentUpon>custom-variables.css</DependentUpon>
     </Content>
+    <Content Include="Content\images\big-data.jpg" />
+    <Content Include="Content\images\datamgt2.jpg" />
+    <Content Include="Content\images\logo-keep-alive_grey.jpg" />
     <Content Include="Content\images\logo-keep-alive_white.png" />
     <Content Include="Content\less\bootstrap\bootstrap.css">
       <DependentUpon>bootstrap.less</DependentUpon>
@@ -404,6 +407,7 @@
     <Content Include="Content\less\custom_bootstrap\custom-other.less" />
     <Content Include="Content\less\custom_bootstrap\custom-navbar.less" />
     <Content Include="Content\less\custom_bootstrap\custom-panels.less" />
+    <Content Include="Content\less\custom_bootstrap\margins.less" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
