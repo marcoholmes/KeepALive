@@ -8,24 +8,28 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                <img src="~/content/images/logo-keep-alive_grey.jpg" alt="Logo KEEPALIVE">
+                <img src="~/content/images/logo-keep-alive_blu-orange.png" alt="Logo KEEPALIVE">
             </a>
-
+                
         </div>
 
-        @if (Request.IsAuthenticated)
+
+        <div class="navbar-collapse collapse">
+            @* <ul class="nav navbar-nav navbar-right"> *@
+            <ul class="nav navbar-nav navbar-right">
+
+                @if (Request.IsAuthenticated)
         {
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+                <li>@Html.ActionLink("Logout", "Index", "Home")</li>
         }
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
 
 
-        
+
     </div>
 </div>

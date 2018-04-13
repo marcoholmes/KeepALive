@@ -1,5 +1,7 @@
 @import "../bootstrap/navbar.less";
-
+.navbar {
+    font-size:  19px;
+}
 .navbar .navbar-brand img {
     height: @navbar-brand-height;
 }
@@ -11,10 +13,18 @@
 .navbar-default {
 
     .navbar-brand {
-       
+
         &:hover,
         &:focus {
             opacity: 0.5;
         }
+    }
+
+    .navbar-toggle {
+        border-color: #3D67AF;
+    }
+
+    .navbar-toggle:hover, .navbar-toggle:focus {
+        background-color: #3D67AF;
     }
 }

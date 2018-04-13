@@ -1,6 +1,36 @@
-﻿.carousel-inner > .item {max-height: 273.548px;}
+﻿.carousel-inner > .item {min-height: 400px;}
+
+.carousel-indicators li {
+    border-color: #3D67AF;
+    background-color: #3D67AF;
+}
+
+.carousel-indicators .active {
+    border-color: #3D67AF;
+    background-color: #3D67AF;
+}
 
 .form-white {
     background:         white;
     padding:            15px;
+}
+html, body {
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        background: #002c77; /* Old browsers */
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002c77+0,00a8c8+100 */
+        background: #002c77; /* Old browsers */
+        background: -moz-linear-gradient(left, #C3C2E1 0%, #002c77 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #C3C2E1 0%, #002c77 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #C3C2E1 0%, #002c77 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C3C2E1', endColorstr='#002c77',GradientType=1 ); /* IE6-9 */
+    }
 }

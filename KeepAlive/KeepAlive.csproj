@@ -239,10 +239,14 @@
     <Content Include="Content\css\custom_bootstrap\custom-variables.min.css">
       <DependentUpon>custom-variables.css</DependentUpon>
     </Content>
+    <Content Include="Content\images\big-data-normal.jpg" />
     <Content Include="Content\images\big-data.jpg" />
+    <Content Include="Content\images\cloud-technology.jpg" />
+    <Content Include="Content\images\datamgt2-resize.jpg" />
     <Content Include="Content\images\datamgt2.jpg" />
-    <Content Include="Content\images\logo-keep-alive_grey.jpg" />
-    <Content Include="Content\images\logo-keep-alive_white.png" />
+    <Content Include="Content\images\folder-cloud.jpg" />
+    <Content Include="Content\images\keeping-your-personal-data-safe-resize.png" />
+    <Content Include="Content\images\logo-keep-alive_blu-orange.png" />
     <Content Include="Content\less\bootstrap\bootstrap.css">
       <DependentUpon>bootstrap.less</DependentUpon>
     </Content>
