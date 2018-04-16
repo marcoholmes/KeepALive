@@ -41,7 +41,7 @@ namespace KeepAlive
                     //    validateInterval: TimeSpan.FromMinutes(30)
                     //    ,
                     //    regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
-
+                    //OnApplyRedirect = CustomDefaultBehavior.ApplyRedirect
 
                 }
             });            
