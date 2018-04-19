@@ -1,0 +1,34 @@
+﻿@using KeepAlive.Models
+
+@model LoginViewModel
+
+<h2>Effettua il login</h2>
+@using (Html.BeginForm("Login", "Account"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Username o email" })
+    </div>
+    <div class="form-group">
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password" })
+    </div>
+
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(model => model.RememberMe)
+            Mantieni l'accesso
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-default bottom-margin-10">Accedi</button>
+
+}
+
+
+
+
+
+
+
+

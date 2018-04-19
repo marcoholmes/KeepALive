@@ -54,12 +54,23 @@ namespace KeepAlive.Controllers
         }
 
         //
-        // GET: /Account/Login
+        // GET: /Account/Index
         [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
+        public ActionResult Index(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            return View();
+
+            return View("Index");
+        }
+
+        //
+        // GET: /Account/Login
+        [AllowAnonymous]
+        public ActionResult Login()
+        {
+            var model = new LoginViewModel();
+
+            return PartialView("Partial/Login", model);
         }
 
         //
@@ -140,7 +151,7 @@ namespace KeepAlive.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            return PartialView("Partial/Register");
         }
 
         //
@@ -233,9 +244,11 @@ namespace KeepAlive.Controllers
         //
         // GET: /Account/ResetPassword
         [AllowAnonymous]
-        public ActionResult ResetPassword(string code)
+        public ActionResult Recovery()
         {
-            return code == null ? View("Error") : View();
+            return PartialView("Partial/Recovery");
+
+            //return code == null ? View("Error") : View();
         }
 
         //
@@ -243,7 +256,7 @@ namespace KeepAlive.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ResetPassword(ResetPasswordViewModel model)
+        public async Task<ActionResult> AccountRecovery(ResetPasswordViewModel model)
         {
             if (!ModelState.IsValid)
             {
