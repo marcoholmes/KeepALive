@@ -2,13 +2,28 @@
   color: #E3A430;
   background-color: #3D67AF;
 }
-div.alternate div:nth-of-type(even) button button:hover {
-  background-color: #000000;
+div.alternate div:nth-of-type(even) button:hover,
+div.alternate div:nth-of-type(even) button:active {
+  background-color: #233a63;
+}
+div.alternate div:nth-of-type(even) button:focus {
+  outline-color: #3D67AF;
 }
 div.alternate div:nth-of-type(odd) button {
   color: #3D67AF;
   background-color: #E3A430;
 }
-div.alternate div:nth-of-type(odd) button button:hover {
-  background-color: #120c02;
+div.alternate div:nth-of-type(odd) button:hover,
+div.alternate div:nth-of-type(odd) button:active {
+  background-color: #986a15;
+}
+div.alternate div:nth-of-type(odd) button:focus {
+  outline-color: #E3A430;
+}
+div.alternate button {
+  border-color: transparent !important;
+}
+div.alternate button:hover,
+div.alternate button:active {
+  color: #fff !important;
 }

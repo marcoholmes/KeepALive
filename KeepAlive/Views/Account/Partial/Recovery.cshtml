@@ -1,18 +1,46 @@
-﻿<h2>Recupero Credenziali</h2>
+﻿<div>
+    <h2>Recupero Credenziali</h2>
 
-<div class="row top-margin-20 alternate">
-    
-    <div class="bottom-margin-20 col-sm-12">
-        <button class="btn btn-default" type="button">
-            <span>Recupero Username</span>
-        </button>
+    <div class="row top-margin-20 alternate">
+
+        <div class="bottom-margin-20 col-sm-12">
+            <button class="btn btn-default" type="button">
+                <span>Recupero Username</span>
+            </button>
+        </div>
+
+        <div class="bottom-margin-20 col-sm-12">
+            <button class="btn btn-default" type="button">
+                <span>Recupero Password</span>
+            </button>
+        </div>
+
     </div>
 
-    <div class="bottom-margin-20 col-sm-12">
-        <button class="btn btn-default" type="button">
-            <span>Recupero Password</span>
-        </button>
-    </div>
+</div>
 
+<div>
+    @Ajax.ActionLink("Effettua l'accesso",
+                                          "Login", null,
+                                          new AjaxOptions()
+                                          {
+                                              UpdateTargetId = "account",
+                                              InsertionMode = InsertionMode.Replace,
+                                              HttpMethod = "GET"
+                                          },
+                                          new { id = "recover" })
+
+</div>
+
+<div>
+    @Ajax.ActionLink("Registrati",
+                                       "Register", null,
+                                       new AjaxOptions()
+                                       {
+                                           UpdateTargetId = "account",
+                                           InsertionMode = InsertionMode.Replace,
+                                           HttpMethod = "GET"
+                                       },
+                                       new { id = "recover" })
 </div>
 

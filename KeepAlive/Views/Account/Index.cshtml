@@ -8,34 +8,11 @@
 <div class="row">
     <div class="col-sm-6 form-white">
 
-        <div id="account">
+        <div id="account" class="text-center">
             @Html.Action("Login")
         </div>
 
-        <div>
-            @Ajax.ActionLink("Hai dimenticato le tue credenziali??",
-                                          "Recovery", null,
-                                          new AjaxOptions()
-                                          {
-                                              UpdateTargetId = "account",
-                                              InsertionMode = InsertionMode.Replace,
-                                              HttpMethod = "GET"
-                                          },
-                                          new { id = "recover" })
-            @*<a href="">Hai dimenticato le tue credenziali?</a>*@
-        </div>
-
-        <div>
-            @Ajax.ActionLink("Registrati",
-                                       "Register", null,
-                                       new AjaxOptions()
-                                       {
-                                           UpdateTargetId = "account",
-                                           InsertionMode = InsertionMode.Replace,
-                                           HttpMethod = "GET"
-                                       },
-                                       new { id = "recover" })
-        </div>
+        
     </div>
 
     @Html.Partial("Partial/Common/_Shoulder")
