@@ -1,0 +1,1 @@
+﻿div.alternate div:nth-of-type(even) button{color:#e3a430;background-color:#3d67af;}div.alternate div:nth-of-type(even) button button:hover{background-color:#000;}div.alternate div:nth-of-type(odd) button{color:#3d67af;background-color:#e3a430;}div.alternate div:nth-of-type(odd) button button:hover{background-color:#120c02;}

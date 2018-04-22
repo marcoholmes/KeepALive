@@ -1,0 +1,8 @@
+﻿div.alternate div:nth-of-type(even) {
+  color: #E3A430;
+  background-color: #3D67AF;
+}
+div.alternate div:nth-of-type(odd) {
+  color: #3D67AF;
+  background-color: #E3A430;
+}

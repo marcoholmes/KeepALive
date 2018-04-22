@@ -232,6 +232,10 @@
     <Content Include="Content\css\bootstrap\mixins\border-radius.min.css">
       <DependentUpon>border-radius.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\custom\theme-orange-blu.css" />
+    <Content Include="Content\css\custom\theme-orange-blu.min.css">
+      <DependentUpon>theme-orange-blu.css</DependentUpon>
+    </Content>
     <Content Include="Content\css\custom_bootstrap\custom-bootstrap.css" />
     <Content Include="Content\css\custom_bootstrap\custom-bootstrap.min.css">
       <DependentUpon>custom-bootstrap.css</DependentUpon>
@@ -277,6 +281,12 @@
     </Content>
     <Content Include="Content\less\bootstrap\variables.min.css">
       <DependentUpon>variables.css</DependentUpon>
+    </Content>
+    <Content Include="Content\less\custom\theme-orange-blu.css">
+      <DependentUpon>theme-orange-blu.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\custom\theme-orange-blu.min.css">
+      <DependentUpon>theme-orange-blu.css</DependentUpon>
     </Content>
     <Content Include="Content\less\custom_bootstrap\bootstrap.css">
       <DependentUpon>custom-bootstrap.less</DependentUpon>
@@ -389,6 +399,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="js\account.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -413,6 +424,10 @@
     <Content Include="Content\less\custom_bootstrap\custom-navbar.less" />
     <Content Include="Content\less\custom_bootstrap\custom-panels.less" />
     <Content Include="Content\less\custom_bootstrap\margins.less" />
+    <Content Include="Content\less\custom\theme-orange-blu.less" />
+    <Content Include="Content\less\custom\alternate.less" />
+    <Content Include="Content\less\custom_bootstrap\custom-buttons.less" />
+    <Content Include="Content\less\custom\variables.less" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

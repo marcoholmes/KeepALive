@@ -1,0 +1,21 @@
+﻿@import "variables.less";
+
+
+div.alternate div:nth-of-type(even) button {
+    color: @brand-secondary;
+    background-color: @brand-primary;
+
+    button:hover {
+        background-color: darken(@brand-primary,50%)
+    }
+}
+
+
+div.alternate div:nth-of-type(odd) button {
+    color: @brand-primary;
+    background-color: @brand-secondary;
+
+    button:hover {
+        background-color: darken(@brand-secondary,50%)
+    }
+}

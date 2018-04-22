@@ -14,27 +14,27 @@
 
         <div>
             @Ajax.ActionLink("Hai dimenticato le tue credenziali??",
-                                     "Recovery", null,
-                                     new AjaxOptions()
-                                     {
-                                         UpdateTargetId = "account",
-                                         InsertionMode = InsertionMode.Replace,
-                                         HttpMethod = "GET"
-                                     },
-                                     new { id = "recover" })
+                                          "Recovery", null,
+                                          new AjaxOptions()
+                                          {
+                                              UpdateTargetId = "account",
+                                              InsertionMode = InsertionMode.Replace,
+                                              HttpMethod = "GET"
+                                          },
+                                          new { id = "recover" })
             @*<a href="">Hai dimenticato le tue credenziali?</a>*@
         </div>
 
         <div>
             @Ajax.ActionLink("Registrati",
-                                  "Register", null,
-                                  new AjaxOptions()
-                                  {
-                                      UpdateTargetId = "account",
-                                      InsertionMode = InsertionMode.Replace,
-                                      HttpMethod = "GET"
-                                  },
-                                  new { id = "recover" })
+                                       "Register", null,
+                                       new AjaxOptions()
+                                       {
+                                           UpdateTargetId = "account",
+                                           InsertionMode = InsertionMode.Replace,
+                                           HttpMethod = "GET"
+                                       },
+                                       new { id = "recover" })
         </div>
     </div>
 
@@ -100,4 +100,5 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/js/account.js")
 }
