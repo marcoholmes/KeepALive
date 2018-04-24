@@ -1,4 +1,8 @@
-﻿<h2>Registrati</h2>
+﻿@using KeepAlive.Models
+
+@model RegisterViewModel
+
+<h2>Registrati</h2>
 <form>
     <div class="form-group">
         @*<label for="exampleInputEmail1">Email address</label>*@
@@ -20,13 +24,13 @@
 
 <div>
     @Ajax.ActionLink("Effettua l'accesso",
-                                          "Login", null,
-                                          new AjaxOptions()
-                                          {
-                                              UpdateTargetId = "account",
-                                              InsertionMode = InsertionMode.Replace,
-                                              HttpMethod = "GET"
-                                          },
-                                          new { id = "recover" })
+                                              "Login", null,
+                                              new AjaxOptions()
+                                              {
+                                                  UpdateTargetId = "account",
+                                                  InsertionMode = InsertionMode.Replace,
+                                                  HttpMethod = "GET"
+                                              },
+                                              new { id = "recover" })
 
 </div>

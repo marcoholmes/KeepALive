@@ -1,0 +1,12 @@
+﻿<div>
+    @Ajax.ActionLink("Effettua l'accesso",
+                                                  "Login", null,
+                                                  new AjaxOptions()
+                                                  {
+                                                      UpdateTargetId = "account",
+                                                      InsertionMode = InsertionMode.Replace,
+                                                      HttpMethod = "GET"
+                                                  },
+                                                  new { id = "recover" })
+
+</div>

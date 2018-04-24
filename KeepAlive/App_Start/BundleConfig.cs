@@ -24,6 +24,9 @@ namespace KeepAlive
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            //bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
+            //          "~/js/*.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/css/custom_bootstrap/custom-bootstrap.css",
                       "~/Content/css/custom/theme-orange-blu.css"));

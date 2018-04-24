@@ -1,15 +1,23 @@
 @import "../bootstrap/variables.less";
 
-@headings-color: #3D67AF;
+@brand-primary: #3D67AF;
+@brand-secondary: #E3A430;
+
+@headings-color: @brand-primary;
 
 @input-border-focus: #C3C2E1;
 
 @navbar-brand-height:              @navbar-height;
 @navbar-brand-padding-vertical:    ((@navbar-height - @navbar-brand-height) / 2);
 
-@navbar-default-bg: #E3A430;
+@navbar-default-bg: @brand-secondary;
 // Navbar links
-@navbar-default-link-color: #3D67AF;
+@navbar-default-link-color: @brand-primary;
 @navbar-default-link-hover-color: #C3C2E1;
 
 @icon-font-path:          "../../fonts/";
+
+@btn-default-color: @brand-secondary;
+@btn-default-bg: @brand-primary;
+@btn-default-color-hover: #fff;
+@btn-default-border: transparent;

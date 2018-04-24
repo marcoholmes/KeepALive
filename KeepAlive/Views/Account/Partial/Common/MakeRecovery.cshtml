@@ -1,0 +1,12 @@
+﻿<div>
+    @Ajax.ActionLink("Hai dimenticato le tue credenziali??",
+                                              "Recovery", null,
+                                              new AjaxOptions()
+                                              {
+                                                  UpdateTargetId = "account",
+                                                  InsertionMode = InsertionMode.Replace,
+                                                  HttpMethod = "GET"
+                                              },
+                                              new { id = "recover" })
+
+</div>

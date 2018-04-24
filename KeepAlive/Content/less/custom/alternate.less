@@ -3,14 +3,18 @@
 div.alternate div:nth-of-type(even) button {
     color: @brand-secondary;
     background-color: @brand-primary;
-    
+
 
     &:hover, &:active {
-        background-color: darken(@brand-primary,20%);
-                
+        background-color: darken(@brand-primary,10%);
     }
-    &:focus{
-        outline-color:@brand-primary;
+
+    &:hover:active {
+        background-color: darken(@brand-primary,20%);
+    }
+
+    &:focus {
+        outline-color: @brand-primary;
     }
 }
 
@@ -18,14 +22,18 @@ div.alternate div:nth-of-type(even) button {
 div.alternate div:nth-of-type(odd) button {
     color: @brand-primary;
     background-color: @brand-secondary;
-    
+
 
     &:hover, &:active {
-        background-color: darken(@brand-secondary,20%);
-                
+        background-color: darken(@brand-secondary,10%);
     }
-    &:focus{
-        outline-color:@brand-secondary;
+
+    &:hover:active {
+        background-color: darken(@brand-secondary,20%);
+    }
+
+    &:focus {
+        outline-color: @brand-secondary;
     }
 }
 

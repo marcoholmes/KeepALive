@@ -4,6 +4,9 @@
 }
 div.alternate div:nth-of-type(even) button:hover,
 div.alternate div:nth-of-type(even) button:active {
+  background-color: #305189;
+}
+div.alternate div:nth-of-type(even) button:hover:active {
   background-color: #233a63;
 }
 div.alternate div:nth-of-type(even) button:focus {
@@ -15,6 +18,9 @@ div.alternate div:nth-of-type(odd) button {
 }
 div.alternate div:nth-of-type(odd) button:hover,
 div.alternate div:nth-of-type(odd) button:active {
+  background-color: #c5891b;
+}
+div.alternate div:nth-of-type(odd) button:hover:active {
   background-color: #986a15;
 }
 div.alternate div:nth-of-type(odd) button:focus {

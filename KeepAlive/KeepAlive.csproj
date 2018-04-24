@@ -206,8 +206,10 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UserRecoveryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -502,6 +504,10 @@
     <Content Include="Views\Account\Partial\Login.cshtml" />
     <Content Include="Views\Account\Partial\Recovery.cshtml" />
     <Content Include="Views\Account\Partial\Register.cshtml" />
+    <Content Include="Views\Account\Partial\Common\MakeRecovery.cshtml" />
+    <Content Include="Views\Account\Partial\Common\MakeLogin.cshtml" />
+    <Content Include="Views\Account\Partial\Common\MakeRegister.cshtml" />
+    <Content Include="Views\Account\Partial\UserRecovery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

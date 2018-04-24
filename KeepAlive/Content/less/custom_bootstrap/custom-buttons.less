@@ -1,3 +1,8 @@
-﻿.btn {
+﻿@import "../bootstrap/buttons.less";
+
+.btn, .btn-default {
     font-size:16px;
+    &:active, &:hover,&:active:hover, &:focus {
+        color: @btn-default-color-hover;
+    }
 }

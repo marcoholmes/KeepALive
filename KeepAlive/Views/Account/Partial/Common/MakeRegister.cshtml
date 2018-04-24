@@ -1,0 +1,11 @@
+﻿<div>
+    @Ajax.ActionLink("Registrati",
+                                               "Register", null,
+                                               new AjaxOptions()
+                                               {
+                                                   UpdateTargetId = "account",
+                                                   InsertionMode = InsertionMode.Replace,
+                                                   HttpMethod = "GET"
+                                               },
+                                               new { id = "recover" })
+</div>

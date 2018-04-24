@@ -25,30 +25,10 @@
 
 }
 
-<div>
-    @Ajax.ActionLink("Hai dimenticato le tue credenziali??",
-                                          "Recovery", null,
-                                          new AjaxOptions()
-                                          {
-                                              UpdateTargetId = "account",
-                                              InsertionMode = InsertionMode.Replace,
-                                              HttpMethod = "GET"
-                                          },
-                                          new { id = "recover" })
 
-</div>
 
-<div>
-    @Ajax.ActionLink("Registrati",
-                                       "Register", null,
-                                       new AjaxOptions()
-                                       {
-                                           UpdateTargetId = "account",
-                                           InsertionMode = InsertionMode.Replace,
-                                           HttpMethod = "GET"
-                                       },
-                                       new { id = "recover" })
-</div>
+@Html.Partial("Partial/Common/MakeRecovery")
+@Html.Partial("Partial/Common/MakeRegister")
 
 
 
