@@ -5,17 +5,14 @@
 <div>
     <h2>Recupero Username</h2>
 
-    <div class="row top-margin-20 alternate">
-
-        <div class="bottom-margin-20 col-sm-12">
-            <button class="btn btn-block btn-default" type="button">
-                <span>Recupero Username</span>
-            </button>
+    <div class="row top-margin-20">
+        Digita l'email che hai usato durante la registrazione:
+        <div class="top-margin-20 form-group">
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Username o email" })
         </div>
-
         <div class="bottom-margin-20 col-sm-12">
-            <button class="btn btn-block btn-default" type="button">
-                <span>Recupero Password</span>
+            <button class="btn btn-default" type="button">
+                <span>Avanti</span>
             </button>
         </div>
 

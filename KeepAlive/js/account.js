@@ -1,17 +1,30 @@
 ﻿//<a href="/Index/Stuff" id="action">show stuff</a>
 
+//$(function () {
+//    $('#userRecovery').click(function () {
+//        alert("preso!");
+//        //$.ajax({
+//        //    url: "userRecovery/account",
+//        //    type: "get",
+//        //    async: true,
+//        //    success: function (html) {
+//        //        $('#recovery').html(html);
+//        //    }
+//        //    })
+//    });
+//});
+
 $(function () {
-    $('#userRecovery').click(function () {
-        alert("preso!");
-        //$.ajax({
-        //    url: "userRecovery/account",
-        //    type: "get",
-        //    async: true,
-        //    success: function (html) {
-        //        $('#recovery').html(html);
-        //    }
-        //    })
-    });
+    $(document).on("click", "#userRecovery", function () {
+        $.ajax({
+            url: "userRecovery/account",
+            type: "get",
+            async: true,
+            success: function (html) {
+                $('#account').html(html);
+            }
+        })
+        });
 });
 
 //$(function () {

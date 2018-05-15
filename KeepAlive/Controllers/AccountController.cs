@@ -259,7 +259,7 @@ namespace KeepAlive.Controllers
         {
             var model = new UserRecoveryViewModel();
 
-            return PartialView("Partial/UserRecovery");
+            return PartialView("Partial/UserRecovery", model);
         }
 
         //

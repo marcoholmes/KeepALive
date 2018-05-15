@@ -7,5 +7,6 @@ namespace KeepAlive.Models
 {
     public class UserRecoveryViewModel
     {
+        public string Email { get; set; }
     }
 }
