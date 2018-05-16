@@ -1,0 +1,24 @@
+﻿@using KeepAlive.Models
+
+@model RegisterViewModel
+
+<h2>Registrati</h2>
+@using (Html.BeginForm("Register2", "Account"))
+{
+    <div class="g-recaptcha" data-sitekey="6LdHcTwUAAAAAIFoGNGSjl_daxhYsQUWVV9PKWWW"></div>
+}
+
+<div>
+    @Ajax.ActionLink("Effettua l'accesso",
+                                                              "Login", null,
+                                                              new AjaxOptions()
+                                                              {
+                                                                  UpdateTargetId = "account",
+                                                                  InsertionMode = InsertionMode.Replace,
+                                                                  HttpMethod = "GET"
+                                                              },
+                                                              new { id = "recover" })
+
+</div>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>

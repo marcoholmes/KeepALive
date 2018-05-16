@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepAlive.Services", "KeepA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepAlive.Identity", "KeepAlive.Identity\KeepAlive.Identity.csproj", "{2A3702D7-708E-4E8A-87A8-C5812F1038DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepAlive.Web", "KeepAlive.Web\KeepAlive.Web.csproj", "{8E802CA2-866F-4A2B-A27B-5A37F89323A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepAlive.Core", "KeepAlive.Core\KeepAlive.Core.csproj", "{4D986F5F-DA1F-49EE-BE83-BCD759EA914E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{2A3702D7-708E-4E8A-87A8-C5812F1038DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A3702D7-708E-4E8A-87A8-C5812F1038DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A3702D7-708E-4E8A-87A8-C5812F1038DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E802CA2-866F-4A2B-A27B-5A37F89323A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E802CA2-866F-4A2B-A27B-5A37F89323A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E802CA2-866F-4A2B-A27B-5A37F89323A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E802CA2-866F-4A2B-A27B-5A37F89323A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D986F5F-DA1F-49EE-BE83-BCD759EA914E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D986F5F-DA1F-49EE-BE83-BCD759EA914E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D986F5F-DA1F-49EE-BE83-BCD759EA914E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D986F5F-DA1F-49EE-BE83-BCD759EA914E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

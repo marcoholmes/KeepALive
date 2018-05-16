@@ -3,8 +3,13 @@
 @model RegisterViewModel
 
 <h2>Registrati</h2>
-@using (Html.BeginForm("Register", "Account"))
+@using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions() {
+                                                                        UpdateTargetId = "account",
+                                                                        InsertionMode = InsertionMode.Replace,
+                                                                        HttpMethod = "POST"
+                                                                       }))
 {
+    @Html.AntiForgeryToken()
     <div class="form-group">
         @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "Username" })
     </div>
@@ -18,19 +23,19 @@
         @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", placeholder = "Conferma password" })
     </div>
 
-    <button type="submit" class="btn btn-default bottom-margin-10">Avanti</button>
+    <button id="register" type="submit" class="btn btn-default bottom-margin-10">Avanti</button>
 
 }
 
 <div>
     @Ajax.ActionLink("Effettua l'accesso",
-                                                          "Login", null,
-                                                          new AjaxOptions()
-                                                          {
-                                                              UpdateTargetId = "account",
-                                                              InsertionMode = InsertionMode.Replace,
-                                                              HttpMethod = "GET"
-                                                          },
-                                                          new { id = "recover" })
+                                                              "Login", null,
+                                                              new AjaxOptions()
+                                                              {
+                                                                  UpdateTargetId = "account",
+                                                                  InsertionMode = InsertionMode.Replace,
+                                                                  HttpMethod = "GET"
+                                                              },
+                                                              new { id = "recover" })
 
 </div>
