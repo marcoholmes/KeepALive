@@ -209,6 +209,7 @@
     <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PwdRecoveryViewModel.cs" />
     <Compile Include="Models\UserRecoveryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -508,6 +509,7 @@
     <Content Include="Views\Account\Partial\Common\MakeLogin.cshtml" />
     <Content Include="Views\Account\Partial\Common\MakeRegister.cshtml" />
     <Content Include="Views\Account\Partial\UserRecovery.cshtml" />
+    <Content Include="Views\Account\Partial\PwdRecovery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

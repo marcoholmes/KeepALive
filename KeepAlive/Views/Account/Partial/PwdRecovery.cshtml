@@ -1,9 +1,9 @@
 ﻿@using KeepAlive.Models
 
-@model UserRecoveryViewModel
+@model PwdRecoveryViewModel
 
 <div>
-    <h2>Recupero Username</h2>
+    <h2>Recupero Password</h2>
 
     <div class="row top-margin-20">
         Digita l'email che hai usato durante la registrazione:
@@ -11,7 +11,7 @@
             @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email" })
         </div>
         <div class="bottom-margin-20 col-sm-12">
-            <button class="btn btn-default" type="button">
+            <button id="pwd-recovery-2" class="btn btn-default" type="button">
                 <span>Avanti</span>
             </button>
         </div>

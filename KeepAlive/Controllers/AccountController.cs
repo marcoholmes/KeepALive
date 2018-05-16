@@ -263,6 +263,16 @@ namespace KeepAlive.Controllers
         }
 
         //
+        // GET: /Account/ResetPassword
+        [AllowAnonymous]
+        public ActionResult PwdRecovery()
+        {
+            var model = new PwdRecoveryViewModel();
+
+            return PartialView("Partial/PwdRecovery", model);
+        }
+
+        //
         // POST: /Account/ResetPassword
         [HttpPost]
         [AllowAnonymous]
