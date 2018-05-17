@@ -1,10 +1,17 @@
 ﻿@using KeepAlive.Models
 
-@model RegisterViewModel
+@model Register2ViewModel
 
 <h2>Registrati</h2>
 @using (Html.BeginForm("Register2", "Account"))
 {
+    <div>
+        Seleziona una domanda segreta
+    </div>
+    @Html.DropDownListFor(m => m.DomandaSegreta, new SelectList(Model.DomandeSegrete,"key", "value"), new { @class = "form-control"})
+
+
+
     <div class="g-recaptcha" data-sitekey="6LdHcTwUAAAAAIFoGNGSjl_daxhYsQUWVV9PKWWW"></div>
 }
 

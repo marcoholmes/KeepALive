@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KeepAlive.Web
+namespace KeepAlive.Web.Extensions.Html
 {
-    public class Class1
+    class SelectListExtensions
     {
     }
 }

@@ -194,6 +194,7 @@ namespace KeepAlive.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterViewModel model)
         {
+
             //if (ModelState.IsValid)
             //{
             //    var user = new IdentityUser { UserName = model.Email, Email = model.Email };
@@ -215,7 +216,7 @@ namespace KeepAlive.Controllers
 
             //// If we got this far, something failed, redisplay form
             //return View(model);
-            return PartialView("Partial/Register2");
+            return PartialView("Partial/Register2", new Register2ViewModel());
         }
 
         //
