@@ -211,7 +211,7 @@
     <Compile Include="Models\CaptchaResponse.cs" />
     <Compile Include="Models\DomandaSegretaViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\RegisterViewModel - Copy.cs" />
+    <Compile Include="Models\Register2ViewModel.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
