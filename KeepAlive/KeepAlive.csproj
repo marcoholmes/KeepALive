@@ -530,6 +530,10 @@
       <Project>{2a3702d7-708e-4e8a-87a8-c5812f1038dd}</Project>
       <Name>KeepAlive.Identity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KeepAlive.Web\KeepAlive.Web.csproj">
+      <Project>{8E802CA2-866F-4A2B-A27B-5A37F89323A0}</Project>
+      <Name>KeepAlive.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

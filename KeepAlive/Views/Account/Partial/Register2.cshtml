@@ -2,17 +2,22 @@
 
 @model Register2ViewModel
 
-<h2>Registrati</h2>
+<h2 class="bottom-margin-20">Registrati</h2>
 @using (Html.BeginForm("Register2", "Account"))
 {
-    <div>
-        Seleziona una domanda segreta
+    <div class="form-group">
+        @Html.LabelFor(m=>m.DomandaSegreta,"Seleziona una domanda segreta")
+        @Html.DropDownListFor(m => m.DomandaSegreta, new SelectList(Model.DomandeSegrete, "key", "value"), new { @class = "form-control" })
     </div>
-    @Html.DropDownListFor(m => m.DomandaSegreta, new SelectList(Model.DomandeSegrete,"key", "value"), new { @class = "form-control"})
 
-
+    <div class="form-group">
+        @Html.LabelFor(m => m.RispostaSegreta, "Rispondi alla domanda segreta che hai scelto")
+        @Html.TextBoxFor(m => m.RispostaSegreta, new { @class = "form-control bottom-margin-20", placeholder = "Risposta segreta" })
+    </div>
 
     <div class="g-recaptcha" data-sitekey="6LeFgFkUAAAAAA3gQzeQUeXAtnVCZDHzu_mKxJ1m"></div>
+
+    <button id="register" type="submit" class="btn btn-default bottom-margin-10">Avanti</button>
 }
 
 <div>
