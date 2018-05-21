@@ -33,3 +33,8 @@ div.alternate button:hover,
 div.alternate button:active {
   color: #fff !important;
 }
+.description-field {
+  color: #999999;
+  text-align: left;
+  margin-bottom: 10px;
+}

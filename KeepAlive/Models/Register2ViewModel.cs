@@ -12,11 +12,11 @@ namespace KeepAlive.Models
     {
 
         [Required]
-        [Display(Description = "Seleziona la domanda segreta")]
+        [Display(Name = "Seleziona la domanda segreta")]
         public int DomandaSegreta { get; set; }
 
         [Required]
-        [Display(Description = "Rispondi alla domanda segreta che hai scelto")]
+        [Display(Name = "Rispondi alla domanda segreta che hai scelto")]
         public string RispostaSegreta { get; set; }
 
         //public IEnumerable<string> DomandeSegrete { get; set; }

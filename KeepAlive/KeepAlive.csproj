@@ -255,12 +255,17 @@
     </Content>
     <Content Include="Content\images\big-data-normal.jpg" />
     <Content Include="Content\images\big-data.jpg" />
+    <Content Include="Content\images\cloud-computing_2.png" />
     <Content Include="Content\images\cloud-technology.jpg" />
     <Content Include="Content\images\datamgt2-resize.jpg" />
     <Content Include="Content\images\datamgt2.jpg" />
     <Content Include="Content\images\folder-cloud.jpg" />
+    <Content Include="Content\images\hacker-code.jpg" />
+    <Content Include="Content\images\hand-world.jpg" />
     <Content Include="Content\images\keeping-your-personal-data-safe-resize.png" />
+    <Content Include="Content\images\LockingPcData.jpg" />
     <Content Include="Content\images\logo-keep-alive_blu-orange.png" />
+    <Content Include="Content\images\moreDevicesAccess.png" />
     <Content Include="Content\less\bootstrap\bootstrap.css">
       <DependentUpon>bootstrap.less</DependentUpon>
     </Content>
@@ -437,6 +442,7 @@
     <Content Include="Content\less\custom\alternate.less" />
     <Content Include="Content\less\custom_bootstrap\custom-buttons.less" />
     <Content Include="Content\less\custom\variables.less" />
+    <Content Include="Content\less\custom\label.less" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
