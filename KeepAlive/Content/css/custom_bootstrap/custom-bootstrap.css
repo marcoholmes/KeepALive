@@ -6773,8 +6773,9 @@ button.close {
 .bottom-margin-100 {
   margin-bottom: 100px;
 }
-.carousel-inner > .item {
-  min-height: 400px;
+.carousel-indicators {
+  position: static;
+  margin-left: 20%;
 }
 .carousel-indicators li {
   border-color: #3D67AF;
