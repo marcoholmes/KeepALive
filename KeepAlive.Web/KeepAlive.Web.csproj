@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions.Html\SelectListExtensions.cs" />
+    <Compile Include="Extensions.Internal\ExpressionExtension.cs" />
+    <Compile Include="Extensions\ModelStateExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

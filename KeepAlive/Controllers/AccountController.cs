@@ -272,6 +272,25 @@ namespace KeepAlive.Controllers
         }
 
         //
+        //POST: /Account/UserRecovery
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<ActionResult> UserRecovery(UserRecoveryViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return PartialView("Partial/UserRecovery",model);
+            }
+
+            var user = await UserManager.FindByNameAsync(model.Email);
+
+            if (user == null)
+            {
+                ModelState.AddModelError("Email", "Indirizzo E-mail non valido")
+            }
+        }
+
+        //
         // GET: /Account/ResetPassword
         [AllowAnonymous]
         public ActionResult PwdRecovery()
