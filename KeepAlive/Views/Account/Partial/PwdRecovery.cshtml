@@ -9,6 +9,7 @@
         Digita l'email che hai usato durante la registrazione:
         <div class="top-margin-20 form-group col-sm-12 center-block">
             @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email" })
+            @Html.ValidationMessageFor(m => m.Email)
         </div>
         <div class="bottom-margin-20 col-sm-12">
             <button id="pwd-recovery-2" class="btn btn-default" type="button">

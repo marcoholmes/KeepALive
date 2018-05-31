@@ -10,6 +10,7 @@ $(function () {
             async: true,
             success: function (html) {
                 $('#account').html(html);
+                App.updateValidation($container);
             }
         })
     });
@@ -21,9 +22,12 @@ $(function () {
             async: true,
             success: function (html) {
                 $('#account').html(html);
+                App.updateValidation($container);
             }
         })
     });
+
+
 
     //$container.on("click", "#register", function () {
     //    $.ajax({

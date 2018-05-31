@@ -5,7 +5,8 @@
                                                {
                                                    UpdateTargetId = "account",
                                                    InsertionMode = InsertionMode.Replace,
-                                                   HttpMethod = "GET"
+                                                   HttpMethod = "GET",
+                                                   OnSuccess = "$.validator.unobtrusive.parse('#account');"
                                                },
-                                               new { id = "recover" })
+                                               new { })
 </div>

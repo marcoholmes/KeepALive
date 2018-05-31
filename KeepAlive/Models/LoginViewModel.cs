@@ -9,9 +9,8 @@ namespace KeepAlive.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "User/Email")]
+        public string UserEmail { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

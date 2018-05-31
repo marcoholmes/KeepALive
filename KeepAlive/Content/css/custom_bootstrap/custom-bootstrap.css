@@ -6828,3 +6828,53 @@ body {
 .btn-default:focus {
   color: #fff;
 }
+.field-validation-error {
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #F48132;
+  vertical-align: baseline;
+  border-radius: .25em;
+  white-space: normal;
+  display: inline-table;
+}
+.has-validation-error .help-block,
+.has-validation-error .control-label,
+.has-validation-error .radio,
+.has-validation-error .checkbox,
+.has-validation-error .radio-inline,
+.has-validation-error .checkbox-inline,
+.has-validation-error.radio label,
+.has-validation-error.checkbox label,
+.has-validation-error.radio-inline label,
+.has-validation-error.checkbox-inline label {
+  color: #a94442;
+}
+.has-validation-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-validation-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.has-validation-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+.has-validation-error .form-control-feedback {
+  color: #a94442;
+}
+.input-validation-error {
+  border: 1px solid #F48132;
+}
+.input-validation-error:focus:focus {
+  border-color: #F48132;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(244, 129, 50, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(244, 129, 50, 0.6);
+}

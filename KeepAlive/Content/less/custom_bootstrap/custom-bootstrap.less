@@ -12,3 +12,27 @@
 @import "custom-buttons.less";
 
 
+.field-validation-error {
+    // like .label & .label-danger
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    color: @field-validation-color;
+    background-color: @field-validation-bg;
+    vertical-align: baseline;
+    border-radius: .25em;
+    white-space: normal;
+    display: inline-table;
+}
+
+.has-validation-error {
+    .has-error;
+}
+
+.input-validation-error {
+    border: 1px solid @field-validation-bg;
+    &:focus{
+        .form-control-focus( @field-validation-bg)
+    }
+}
+

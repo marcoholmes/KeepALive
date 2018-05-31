@@ -3,39 +3,33 @@
 @model RegisterViewModel
 
 <h2>Registrati</h2>
-@using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions() {
-                                                                        UpdateTargetId = "account",
-                                                                        InsertionMode = InsertionMode.Replace,
-                                                                        HttpMethod = "POST"
-                                                                       }))
+@using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions()
+{
+    UpdateTargetId = "account",
+    InsertionMode = InsertionMode.Replace,
+    HttpMethod = "POST"
+}))
 {
     @Html.AntiForgeryToken()
-    <div class="form-group">
-        @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "Username" })
-    </div>
-    <div class="form-group">
-        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email" })
-    </div>
-    <div class="form-group">
-        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password" })
-    </div>
-    <div class="form-group">
-        @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", placeholder = "Conferma password" })
-    </div>
+<div class="form-group">
+    @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "Username" })
+    @Html.ValidationMessageFor(m => m.Username)
+</div>
+<div class="form-group">
+    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email" })
+    @Html.ValidationMessageFor(m => m.Email)
+</div>
+<div class="form-group">
+    @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password" })
+    @Html.ValidationMessageFor(m => m.Password)
+</div>
+<div class="form-group">
+    @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", placeholder = "Conferma password" })
+    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+</div>
 
     <button id="register" type="submit" class="btn btn-default bottom-margin-10">Avanti</button>
-
 }
 
-<div>
-    @Ajax.ActionLink("Effettua l'accesso",
-                                                              "Login", null,
-                                                              new AjaxOptions()
-                                                              {
-                                                                  UpdateTargetId = "account",
-                                                                  InsertionMode = InsertionMode.Replace,
-                                                                  HttpMethod = "GET"
-                                                              },
-                                                              new { id = "recover" })
 
-</div>
+@Html.Partial("Partial/Common/MakeLogin")

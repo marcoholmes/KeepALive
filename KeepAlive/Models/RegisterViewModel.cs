@@ -14,8 +14,7 @@ namespace KeepAlive.Models
         public string Email { get; set; }
 
         [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
+        [MinLength(6)]
         public string Username { get; set; }
 
         [Required]
