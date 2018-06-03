@@ -557,6 +557,7 @@
     <Content Include="Views\Account\Partial\UserRecovery.cshtml" />
     <Content Include="Views\Account\Partial\PwdRecovery.cshtml" />
     <Content Include="Views\Account\Partial\Register2.cshtml" />
+    <Content Include="Views\Account\Partial\UserRecoverySuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -567,6 +568,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KeepAlive.I18n\KeepAlive.I18n.csproj">
+      <Project>{0f7aaaee-f7d0-48b2-8bf3-8c45f90fc3f2}</Project>
+      <Name>KeepAlive.I18n</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KeepAlive.Identity\KeepAlive.Identity.csproj">
       <Project>{2a3702d7-708e-4e8a-87a8-c5812f1038dd}</Project>
       <Name>KeepAlive.Identity</Name>

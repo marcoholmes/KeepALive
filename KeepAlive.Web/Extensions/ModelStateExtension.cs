@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using KeepAlive.Web.Extensions.Internal;
 
 namespace KeepAlive.Web.Extensions
 {
@@ -14,7 +15,7 @@ namespace KeepAlive.Web.Extensions
                                           Expression<Func<TModel, Object>> expression,
                                           string errorMessage)
         {
-            string key = "";
+            string key = ExpressionExtension.GetExpressionText(expression);
             string message = String.Format(errorMessage, key);
             modelState.AddModelError(key, message);
         }

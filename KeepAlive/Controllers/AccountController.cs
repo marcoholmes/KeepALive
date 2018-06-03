@@ -1,23 +1,21 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
+﻿using KeepAlive.Identity;
+using KeepAlive.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using KeepAlive.Models;
-using KeepAlive.Identity;
 using Newtonsoft.Json;
+using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Mvc;
 
 namespace KeepAlive.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        
         private ApplicationSignInManager SignInManager;
         private ApplicationUserManager UserManager;
                 
@@ -286,8 +284,12 @@ namespace KeepAlive.Controllers
 
             if (user == null)
             {
-                ModelState.AddModelError("Email", "Indirizzo E-mail non valido")
+                return PartialView("Partial/UserRecoverySuccess");
             }
+
+            //await UserManager.SendEmailAsync(user, "Recupero Username", "l'username del tuo account è scoppolatura di minghia");
+
+            return PartialView("Partial/UserRecoverySuccess");
         }
 
         //
@@ -298,6 +300,29 @@ namespace KeepAlive.Controllers
             var model = new PwdRecoveryViewModel();
 
             return PartialView("Partial/PwdRecovery", model);
+        }
+
+        //
+        //POST: /Account/UserRecovery
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<ActionResult> PwdRecovery(PwdRecoveryViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return PartialView("Partial/PwdRecovery", model);
+            }
+
+            var user = await UserManager.FindByNameAsync(model.Email);
+
+            if (user == null)
+            {
+                return PartialView("Partial/PwdRecoverySuccess");
+            }
+
+            //await UserManager.SendEmailAsync(user, "Recupero Username", "l'username del tuo account è scoppolatura di minghia");
+
+            return PartialView("Partial/PwdRecoverySuccess");
         }
 
         //

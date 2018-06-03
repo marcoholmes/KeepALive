@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -19,7 +20,8 @@ namespace KeepAlive.Web.Extensions.Internal
                 //qui non devo usare il direct cast ma il trycast, per cui devo modificarlo
                 var ue = (UnaryExpression)(expression.Body);
 
-                return string.Join(".", GetProperties(ue.Operand).[Select](p => p.name));
+                //return string.Join(".", GetProperties(ue.Operand).[Select](p => p.name));
+                return string.Join(".", GetProperties(ue.Operand).Select(p => p.Name));
             }
 
             return ExpressionHelper.GetExpressionText(expr);
@@ -27,11 +29,23 @@ namespace KeepAlive.Web.Extensions.Internal
 
         private static IEnumerable<PropertyInfo> GetProperties(Expression expression)
         {
-            //yield 
+            var memberExpression = (MemberExpression)(expression);
+
+            if (memberExpression == null)
+            {
+                yield break; 
+            }
+
+            var prop = (PropertyInfo)(memberExpression.Member);
+
+            foreach (PropertyInfo propertyInfo in GetProperties(memberExpression.Expression))
+            {
+                yield return propertyInfo;
+            }
+
+            yield return prop;
         }
     }
 
-    internal class PropertyInfo
-    {
-    }
+    
 }
