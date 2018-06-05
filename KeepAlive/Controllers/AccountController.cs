@@ -162,31 +162,31 @@ namespace KeepAlive.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(RegisterViewModel model)
+        public async Task<PartialViewResult> Register(RegisterViewModel model)
         {
             if (!ModelState.IsValid)
             {
-                return PartialView("Partial/Register", model);
+                return  PartialView("Partial/Register", model);
             }
-            //if (ModelState.IsValid)
-            //{
-            //    var user = new IdentityUser { UserName = model.Email, Email = model.Email };
-            //    var result = await UserManager.CreateAsync(user, model.Password);
-            //    if (result.Succeeded)
-            //    {
-            //        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+            if (ModelState.IsValid)
+            {
+                var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                var result = await UserManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
-            //        // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-            //        // Send an email with this link
-            //        string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-            //        var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-            //        await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
+                    // Send an email with this link
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-            //        return RedirectToAction("Index", "Home");
-            //    }
-            //    AddErrors(result);
-            //}
-
+                    //return RedirectToAction("Index", "Home");
+                }
+                AddErrors(result);
+            }
+            
             //// If we got this far, something failed, redisplay form
             //return View(model);
             return PartialView("Partial/Register2", new Register2ViewModel());

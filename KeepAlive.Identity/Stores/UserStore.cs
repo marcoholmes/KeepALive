@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
-
 namespace KeepAlive.Identity
 {
     public class UserStore : IUserStore<IdentityUser, int>,
@@ -16,6 +13,7 @@ namespace KeepAlive.Identity
                              IUserLoginStore<IdentityUser, int>
                                 
     {
+        
         public Task CreateAsync(IdentityUser user)
         {
             return Task.CompletedTask;

@@ -74,7 +74,10 @@
     <Compile Include="Stores\UserStore.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\KeepAlive.Core\KeepAlive.Core.csproj">
+      <Project>{4d986f5f-da1f-49ee-be83-bcd759ea914e}</Project>
+      <Name>KeepAlive.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

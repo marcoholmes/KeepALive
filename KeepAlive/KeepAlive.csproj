@@ -261,6 +261,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\dbo.Security_question_Script.sql" />
+    <Content Include="App_Data\dbo.Users_Script.sql" />
     <Content Include="App_Data\KeepAlive.mdf" />
     <Content Include="App_Data\KeepAlive_log.ldf">
       <DependentUpon>KeepAlive.mdf</DependentUpon>
@@ -579,6 +580,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KeepAlive.Core\KeepAlive.Core.csproj">
+      <Project>{4d986f5f-da1f-49ee-be83-bcd759ea914e}</Project>
+      <Name>KeepAlive.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KeepAlive.I18n\KeepAlive.I18n.csproj">
       <Project>{0f7aaaee-f7d0-48b2-8bf3-8c45f90fc3f2}</Project>
       <Name>KeepAlive.I18n</Name>

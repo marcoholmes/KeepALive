@@ -1,23 +1,13 @@
-﻿using Microsoft.AspNet.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 
-namespace KeepAlive.Identity
+namespace KeepAlive.Core.Domain
 {
-    public class IdentityUser : IUser<int>
+    public class User
     {
-        public IdentityUser()
-        {
-            
-        }
-        public IdentityUser(int id)
-        {
-            this.Id = id;
-        }
         public int Id { get; set; }
 
         public string UserName { get; set; }

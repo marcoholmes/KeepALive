@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountData.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DB\Connections.cs" />
     <Compile Include="DB\DbFactory.cs" />
@@ -55,6 +56,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KeepAlive.Core\KeepAlive.Core.csproj">
+      <Project>{4D986F5F-DA1F-49EE-BE83-BCD759EA914E}</Project>
+      <Name>KeepAlive.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeepAlive.Identity\KeepAlive.Identity.csproj">
+      <Project>{2A3702D7-708E-4E8A-87A8-C5812F1038DD}</Project>
+      <Name>KeepAlive.Identity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
