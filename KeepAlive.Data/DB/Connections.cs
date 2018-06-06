@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanigDbForEncryption.Data.DB
+namespace KeepAlive.Data.DB
 {
     public sealed class Connections
     {

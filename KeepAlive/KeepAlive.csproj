@@ -262,9 +262,9 @@
   <ItemGroup>
     <Content Include="App_Data\dbo.Security_question_Script.sql" />
     <Content Include="App_Data\dbo.Users_Script.sql" />
-    <Content Include="App_Data\KeepAlive.mdf" />
-    <Content Include="App_Data\KeepAlive_log.ldf">
-      <DependentUpon>KeepAlive.mdf</DependentUpon>
+    <Content Include="App_Data\KeepAliveDB.mdf" />
+    <Content Include="App_Data\KeepAliveDB_log.ldf">
+      <DependentUpon>KeepAliveDB.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -584,6 +584,10 @@
       <Project>{4d986f5f-da1f-49ee-be83-bcd759ea914e}</Project>
       <Name>KeepAlive.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KeepAlive.Data\KeepAlive.Data.csproj">
+      <Project>{ee8dff6a-5848-4a9e-9c54-040700a4c5d3}</Project>
+      <Name>KeepAlive.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KeepAlive.I18n\KeepAlive.I18n.csproj">
       <Project>{0f7aaaee-f7d0-48b2-8bf3-8c45f90fc3f2}</Project>
       <Name>KeepAlive.I18n</Name>
@@ -591,6 +595,10 @@
     <ProjectReference Include="..\KeepAlive.Identity\KeepAlive.Identity.csproj">
       <Project>{2a3702d7-708e-4e8a-87a8-c5812f1038dd}</Project>
       <Name>KeepAlive.Identity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeepAlive.Services\KeepAlive.Services.csproj">
+      <Project>{cc1612e1-c1a0-468a-b4da-6d6595af9603}</Project>
+      <Name>KeepAlive.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\KeepAlive.Web\KeepAlive.Web.csproj">
       <Project>{8E802CA2-866F-4A2B-A27B-5A37F89323A0}</Project>

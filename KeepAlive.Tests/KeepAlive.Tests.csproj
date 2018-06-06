@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AccountDataUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
@@ -99,6 +100,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KeepAlive.Core\KeepAlive.Core.csproj">
+      <Project>{4D986F5F-DA1F-49EE-BE83-BCD759EA914E}</Project>
+      <Name>KeepAlive.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeepAlive.Data\KeepAlive.Data.csproj">
+      <Project>{EE8DFF6A-5848-4A9E-9C54-040700A4C5D3}</Project>
+      <Name>KeepAlive.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KeepAlive\KeepAlive.csproj">
       <Project>{BA5A389A-29A9-46AF-95EB-BF6289FFC762}</Project>
       <Name>KeepAlive</Name>

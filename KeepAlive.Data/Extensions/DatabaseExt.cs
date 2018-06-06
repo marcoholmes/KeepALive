@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanigDbForEncryption.Data.Extensions
+namespace KeepAlive.Data.Extensions
 {
     public static class DatabaseExt
     {

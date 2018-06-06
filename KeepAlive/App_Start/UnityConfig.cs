@@ -1,4 +1,8 @@
+using KeepAlive.Core.Contracts.Data;
+using KeepAlive.Core.Contracts.Service;
+using KeepAlive.Data;
 using KeepAlive.Identity;
+using KeepAlive.Services;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System;
@@ -46,7 +50,8 @@ namespace KeepAlive
             // Make sure to add a Unity.Configuration to the using statements.
             // container.LoadConfiguration();
             IdentityRegisterTypes(container);
-
+            ServiceRegisterTypes(container);
+            DataRegisterTypes(container);
         }
 
         public static void IdentityRegisterTypes(IUnityContainer container)
@@ -59,6 +64,16 @@ namespace KeepAlive
                 new InjectionFactory(
                     o => System.Web.HttpContext.Current.GetOwinContext().Authentication));
             
+        }
+
+        public static void ServiceRegisterTypes(IUnityContainer container)
+        {
+            container.RegisterType<IAccountService, AccountService>();
+        }
+
+        public static void DataRegisterTypes(IUnityContainer container)
+        {
+            container.RegisterType<IAccountData, AccountData>();
         }
     }
 }

@@ -170,7 +170,7 @@ namespace KeepAlive.Controllers
             }
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                var user = new IdentityUser { UserName = model.Username, Email = model.Email, Password = model.Password };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

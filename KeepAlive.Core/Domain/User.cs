@@ -17,5 +17,11 @@ namespace KeepAlive.Core.Domain
         public string Email { get; set; }
 
         public string PasswordHash { get; set; }
+
+        public DateTime DataRegistrazione { get; set; }
+        public bool EmailConfermata { get; set; }
+        public bool AccountBloccato { get; set; }
+
+
     }
 }

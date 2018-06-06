@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 
-namespace CleanigDbForEncryption.Data.DB
+namespace KeepAlive.Data.DB
 {
     public class DbFactory
     {

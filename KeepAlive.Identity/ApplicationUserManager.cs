@@ -7,20 +7,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace KeepAlive.Identity
 {
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
     public class ApplicationUserManager : UserManager<IdentityUser, int>
     {
-        public ApplicationUserManager(IUserStore<IdentityUser, int> store)
-            : base(store)
+        public ApplicationUserManager(IUserStore<IdentityUser, int>  store) :base(store)
         {
+            
         }
+
+        //public ApplicationUserManager(IUserStore<IdentityUser, int> store)
+        //    : base(store)
+        //{
+        //    _store = store;
+        //}
 
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context)
         {
-            var manager = new ApplicationUserManager(new UserStore());
+            var userStore = DependencyResolver.Current.GetService<UserStore>();
+          
+            var manager = new ApplicationUserManager(userStore);
             // Configure validation logic for usernames
             manager.UserValidator = new UserValidator<IdentityUser, int>(manager)
             {
@@ -65,9 +74,9 @@ namespace KeepAlive.Identity
             return manager;
         }
 
-        public override Task<bool> IsEmailConfirmedAsync(int userId)
-        {
-            return base.IsEmailConfirmedAsync(userId);
-        }
+        //public override Task<bool> IsEmailConfirmedAsync(int userId)
+        //{
+        //    return base.IsEmailConfirmedAsync(userId);
+        //}
     }
 }

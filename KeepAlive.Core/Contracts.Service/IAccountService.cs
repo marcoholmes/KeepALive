@@ -11,5 +11,6 @@ namespace KeepAlive.Core.Contracts.Service
     public interface IAccountService
     {
         User FindByName(string userName);
+        bool CreateUser(User user);
     }
 }

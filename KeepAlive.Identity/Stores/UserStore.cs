@@ -1,21 +1,32 @@
 ﻿using Microsoft.AspNet.Identity;
 using System;
+using KeepAlive.Core.Contracts.Service;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using KeepAlive.Core.Domain;
+
 namespace KeepAlive.Identity
 {
     public class UserStore : IUserStore<IdentityUser, int>,
                              IUserPasswordStore<IdentityUser, int>,
                              IUserEmailStore<IdentityUser, int>,
                              IUserLockoutStore<IdentityUser, int>,
-                             IUserTwoFactorStore<IdentityUser,int>,
-                             IUserPhoneNumberStore<IdentityUser,int>,
+                             IUserTwoFactorStore<IdentityUser, int>,
+                             IUserPhoneNumberStore<IdentityUser, int>,
                              IUserLoginStore<IdentityUser, int>
-                                
+
     {
-        
-        public Task CreateAsync(IdentityUser user)
+        private IAccountService _accountService;
+
+        public UserStore(IAccountService accountService)
         {
+            _accountService = accountService;
+        }
+
+        public Task CreateAsync(IdentityUser identityUser)
+        {
+            User user = CreateUserFromIdentityUser(identityUser);
+            bool val = _accountService.CreateUser(user);
             return Task.CompletedTask;
         }
 
@@ -39,9 +50,20 @@ namespace KeepAlive.Identity
 
         public Task<IdentityUser> FindByNameAsync(string userName)
         {
-            IdentityUser user = new IdentityUser(1);
-            //return Task.FromResult(default(IdentityUser));
-            return Task.FromResult(user);
+            IdentityUser identityUser = new IdentityUser();
+            var user = _accountService.FindByName(userName);
+
+            if (user != null)
+            {
+                identityUser = CreateIdentityUser(user);
+            }
+
+            return Task.FromResult(identityUser);
+        }
+
+        public Task<IdentityUser> FindByEmailAsync(string email)
+        {
+            return Task.FromResult(default(IdentityUser));
         }
 
         public Task UpdateAsync(IdentityUser user)
@@ -51,6 +73,7 @@ namespace KeepAlive.Identity
 
         public Task SetPasswordHashAsync(IdentityUser user, string passwordHash)
         {
+            user.PasswordHash = passwordHash;
             return Task.CompletedTask;
         }
 
@@ -82,11 +105,6 @@ namespace KeepAlive.Identity
         public Task SetEmailConfirmedAsync(IdentityUser user, bool confirmed)
         {
             throw new NotImplementedException();
-        }
-
-        public Task<IdentityUser> FindByEmailAsync(string email)
-        {
-            return Task.FromResult(default(IdentityUser));
         }
 
         public Task<DateTimeOffset> GetLockoutEndDateAsync(IdentityUser user)
@@ -179,6 +197,34 @@ namespace KeepAlive.Identity
         public Task<IdentityUser> FindAsync(UserLoginInfo login)
         {
             throw new NotImplementedException();
+        }
+
+        private IdentityUser CreateIdentityUser(User user)
+        {
+            IdentityUser identityUser = new IdentityUser
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                Email = user.Email,
+                Password = user.Password,
+                PasswordHash = user.PasswordHash
+            };
+
+            return identityUser;
+        }
+
+        private User CreateUserFromIdentityUser(IdentityUser identityUser)
+        {
+            User user = new User
+            {
+                Id = identityUser.Id,
+                UserName = identityUser.UserName,
+                Email = identityUser.Email,
+                Password = identityUser.Password,
+                PasswordHash = identityUser.PasswordHash
+            };
+
+            return user;
         }
     }
 }
