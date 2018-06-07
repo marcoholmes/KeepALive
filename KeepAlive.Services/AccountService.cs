@@ -19,6 +19,11 @@ namespace KeepAlive.Services
             return _accountData.FindByName(userName);
         }
 
+        public User FindByEmail(string email)
+        {
+            return _accountData.FindByEmail(email);
+        }
+
         public bool CreateUser(User user)
         {
             user.AccountBloccato = false;

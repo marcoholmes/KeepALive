@@ -1,10 +1,4 @@
 ﻿using KeepAlive.Core.Domain;
-using KeepAlive.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KeepAlive.Core.Contracts.Service
 {
@@ -12,5 +6,6 @@ namespace KeepAlive.Core.Contracts.Service
     {
         User FindByName(string userName);
         bool CreateUser(User user);
+        User FindByEmail(string email);
     }
 }

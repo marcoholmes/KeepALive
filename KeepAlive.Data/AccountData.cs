@@ -35,6 +35,24 @@ namespace KeepAlive.Data
             return retVal;
         }
 
+        public User FindByEmail(string email)
+        {
+            Database db = DbFactory.CreateDatabase();
+            User retVal = null;
+
+            var sql = @"SELECT * FROM users 
+                        WHERE de_email = @de_email";
+
+            using (DbCommand cmd = db.GetSqlStringCommand(sql))
+            {
+                IRowMapper<User> mapper = new UserMapper();
+                db.AddInParameter(cmd, "@de_email", System.Data.DbType.String, email);
+                retVal = db.ExecuteDbCommand(cmd, mapper);
+            }
+
+            return retVal;
+        }
+
         public bool CreateUser(User user)
         {
             Database db = DbFactory.CreateDatabase();

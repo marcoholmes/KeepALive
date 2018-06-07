@@ -11,6 +11,7 @@
 }))
 {
     @Html.AntiForgeryToken()
+    @Html.ValidationSummary();
 <div class="form-group">
     @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "Username" })
     @Html.ValidationMessageFor(m => m.Username)

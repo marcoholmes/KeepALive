@@ -50,20 +50,20 @@ namespace KeepAlive.Identity
 
         public Task<IdentityUser> FindByNameAsync(string userName)
         {
-            IdentityUser identityUser = new IdentityUser();
             var user = _accountService.FindByName(userName);
 
-            if (user != null)
-            {
-                identityUser = CreateIdentityUser(user);
-            }
+            IdentityUser identityUser = CreateIdentityUser(user);
 
             return Task.FromResult(identityUser);
         }
 
         public Task<IdentityUser> FindByEmailAsync(string email)
         {
-            return Task.FromResult(default(IdentityUser));
+            User user = _accountService.FindByEmail(email);
+
+            IdentityUser identityUser = CreateIdentityUser(user);
+
+            return Task.FromResult(identityUser);
         }
 
         public Task UpdateAsync(IdentityUser user)
@@ -201,14 +201,18 @@ namespace KeepAlive.Identity
 
         private IdentityUser CreateIdentityUser(User user)
         {
-            IdentityUser identityUser = new IdentityUser
+            IdentityUser identityUser = null;
+            if (user != null)
             {
-                Id = user.Id,
-                UserName = user.UserName,
-                Email = user.Email,
-                Password = user.Password,
-                PasswordHash = user.PasswordHash
-            };
+                identityUser = new IdentityUser
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    Password = user.Password,
+                    PasswordHash = user.PasswordHash
+                };
+            }
 
             return identityUser;
         }

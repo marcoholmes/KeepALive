@@ -63,6 +63,8 @@ namespace KeepAlive
             container.RegisterType<IAuthenticationManager>(
                 new InjectionFactory(
                     o => System.Web.HttpContext.Current.GetOwinContext().Authentication));
+            //container.RegisterType<ApplicationUserManager>();
+            container.RegisterType<ApplicationSignInManager>();
             
         }
 

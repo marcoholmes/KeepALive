@@ -23,6 +23,8 @@ namespace KeepAlive.Controllers
         {
             UserManager = userManager;
             SignInManager = signInManager;
+
+            //userManager.UserValidator = new UserValidator<IdentityUser, int>(userManager);
         }
         
         //
@@ -189,7 +191,7 @@ namespace KeepAlive.Controllers
             
             //// If we got this far, something failed, redisplay form
             //return View(model);
-            return PartialView("Partial/Register2", new Register2ViewModel());
+            return PartialView("Partial/Register", new Register2ViewModel());
         }
 
         //

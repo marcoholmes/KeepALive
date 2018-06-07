@@ -73,11 +73,16 @@
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\SmsService.cs" />
     <Compile Include="Stores\UserStore.cs" />
+    <Compile Include="Validators\UserValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KeepAlive.Core\KeepAlive.Core.csproj">
       <Project>{4d986f5f-da1f-49ee-be83-bcd759ea914e}</Project>
       <Name>KeepAlive.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeepAlive.Services\KeepAlive.Services.csproj">
+      <Project>{CC1612E1-C1A0-468A-B4DA-6D6595AF9603}</Project>
+      <Name>KeepAlive.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

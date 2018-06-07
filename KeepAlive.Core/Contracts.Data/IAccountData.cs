@@ -6,5 +6,6 @@ namespace KeepAlive.Core.Contracts.Data
     {
         User FindByName(string userName);
         bool CreateUser(User user);
+        User FindByEmail(string email);
     }
 }
