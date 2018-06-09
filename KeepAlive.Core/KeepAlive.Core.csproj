@@ -46,11 +46,5 @@
     <Compile Include="Domain\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KeepAlive.Identity\KeepAlive.Identity.csproj">
-      <Project>{2A3702D7-708E-4E8A-87A8-C5812F1038DD}</Project>
-      <Name>KeepAlive.Identity</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

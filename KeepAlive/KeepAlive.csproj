@@ -298,6 +298,8 @@
     <Content Include="Content\css\custom_bootstrap\custom-variables.min.css">
       <DependentUpon>custom-variables.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\fonts\fontawesome-all.css" />
+    <Content Include="Content\fonts\exclamation-circle.svg" />
     <Content Include="Content\images\big-data-normal.jpg" />
     <Content Include="Content\images\big-data.jpg" />
     <Content Include="Content\images\cloud-computing_2.png" />
@@ -490,6 +492,7 @@
     <Content Include="Content\less\custom\variables.less" />
     <Content Include="Content\less\custom\label.less" />
     <Content Include="Config\Connections.config" />
+    <Content Include="Content\less\custom\summary-errors.less" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

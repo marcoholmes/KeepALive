@@ -30,7 +30,8 @@ namespace KeepAlive
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/css/custom_bootstrap/custom-bootstrap.css",
-                      "~/Content/css/custom/theme-orange-blu.css"));
+                      "~/Content/css/custom/theme-orange-blu.css",
+                      "~/Content/css/fonts/fontawesome-all.css"));
                       //,
                       //"~/Content/site.css"
         }

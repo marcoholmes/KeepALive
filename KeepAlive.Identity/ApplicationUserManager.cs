@@ -16,14 +16,21 @@ namespace KeepAlive.Identity
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
     public class ApplicationUserManager : UserManager<IdentityUser, int>
     {
-
-        private bool _disposed;
-
+        
         public ApplicationUserManager(IUserStore<IdentityUser, int>  store) :base(store)
         {
             this.UserValidator = new Validators.UserValidator<IdentityUser, int>(this)
             {
                 RequireUniqueEmail = true
+            };
+
+            PasswordValidator = new Validators.PasswordValidator()
+            {
+                RequireDigit = true,
+                RequiredLength = 6,
+                RequireLowercase = true,
+                RequireNonLetterOrDigit = true,
+                RequireUppercase = true
             };
         }
 
@@ -91,7 +98,6 @@ namespace KeepAlive.Identity
 
         public override async Task<IdentityResult> CreateAsync(IdentityUser user, string password)
         {
-            ThrowIfDisposed();
             var passwordStore = GetPasswordStore();
             if (user == null)
             {
@@ -101,30 +107,24 @@ namespace KeepAlive.Identity
             {
                 throw new ArgumentNullException("password");
             }
-            var result = await UpdatePassword(passwordStore, user, password).WithCurrentCulture();
+            //var result = await UpdatePassword(passwordStore, user, password).WithCurrentCulture();
+            var result = await UpdatePassword(passwordStore, user, password);
             if (!result.Succeeded)
             {
                 return result;
             }
-            return await CreateAsync(user).WithCurrentCulture();
+            //return await CreateAsync(user).WithCurrentCulture();
+            return await CreateAsync(user);
         }
 
         private IUserPasswordStore<IdentityUser, int> GetPasswordStore()
         {
-            var cast = Store as IUserPasswordStore<IdentityUser, int>;
-            if (cast == null)
+            if (!(Store is IUserPasswordStore<IdentityUser, int> cast))
             {
-                throw new NotSupportedException(Resources.StoreNotIUserPasswordStore);
+                throw new NotSupportedException("StoreNotIUserPasswordStore");
             }
             return cast;
         }
 
-        private void ThrowIfDisposed()
-        {
-            if (_disposed)
-            {
-                throw new ObjectDisposedException(GetType().Name);
-            }
-        }
     }
 }

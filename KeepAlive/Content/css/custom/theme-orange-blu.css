@@ -38,3 +38,7 @@ div.alternate button:active {
   text-align: left;
   margin-bottom: 10px;
 }
+.validation-summary-errors li {
+  list-style-type: none;
+  text-align: left;
+}
