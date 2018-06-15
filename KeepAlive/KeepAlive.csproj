@@ -298,8 +298,11 @@
     <Content Include="Content\css\custom_bootstrap\custom-variables.min.css">
       <DependentUpon>custom-variables.css</DependentUpon>
     </Content>
-    <Content Include="Content\css\fonts\fontawesome-all.css" />
-    <Content Include="Content\fonts\exclamation-circle.svg" />
+    <Content Include="Content\css\fontawesome-all.css" />
+    <Content Include="Content\webfonts\exclamation-circle.svg" />
+    <Content Include="Content\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\webfonts\fa-solid-900.svg" />
     <Content Include="Content\images\big-data-normal.jpg" />
     <Content Include="Content\images\big-data.jpg" />
     <Content Include="Content\images\cloud-computing_2.png" />
@@ -373,7 +376,7 @@
     <Content Include="Content\less\custom_bootstrap\variables.min.css">
       <DependentUpon>variables.css</DependentUpon>
     </Content>
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\webfonts\glyphicons-halflings-regular.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -381,10 +384,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\webfonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\webfonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\webfonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\webfonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\less\bootstrap\wells.less" />
     <Content Include="Content\less\bootstrap\variables.less" />
     <Content Include="Content\less\bootstrap\utilities.less" />
@@ -493,6 +496,18 @@
     <Content Include="Content\less\custom\label.less" />
     <Content Include="Config\Connections.config" />
     <Content Include="Content\less\custom\summary-errors.less" />
+    <Content Include="Content\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\webfonts\fa-solid-900.woff2" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

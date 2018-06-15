@@ -1,12 +1,13 @@
-﻿<div>
+﻿@using KeepAlive.Web.Utilities
+<div>
     @Ajax.ActionLink("Hai dimenticato le tue credenziali??",
                                               "Recovery", null,
-                                              new AjaxOptions()
+                                              new AccountAjaxOptions()
                                               {
                                                   UpdateTargetId = "account",
                                                   InsertionMode = InsertionMode.Replace,
-                                                  HttpMethod = "GET",
-                                                  OnSuccess = "$.validator.unobtrusive.parse('#account');"
+                                                  HttpMethod = "GET"
+                                                  //OnSuccess = "$.validator.unobtrusive.parse('#account');"
                                               },
                                               new { })
 

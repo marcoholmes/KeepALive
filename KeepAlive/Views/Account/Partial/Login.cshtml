@@ -3,7 +3,7 @@
 @model LoginViewModel
 
 <h2>Effettua il login</h2>
-@using (Html.BeginForm("Login", "Account"))
+@using (Html.BeginForm("Login", "Account", FormMethod.Post, new { id = "signiin"}))
 {
     @Html.AntiForgeryToken()
 

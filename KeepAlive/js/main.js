@@ -35,6 +35,36 @@
 
             $('.input-validation-error').parents('.form-group')
                 .addClass('has-validation-error');
+            App.setCustomInvalidHandler();
+
+        },
+
+        setCustomInvalidHandler: function () {
+
+            var $forms = $('form');
+            $.each($forms, function (key, value) {
+                $forms.off('invalid-form.validate')
+                    .on('invalid-form.validate', newInvalidHandler);
+                //$forms.bind('invalid-form.validate', newInvalidHandler);
+            });
         }
     };
 }();
+
+function newInvalidHandler(event, validator) {
+    var container = $($('form')).find("[data-valmsg-summary=true]"),
+        list = container.find("ul");
+
+    if (list && list.length && validator.errorList.length) {
+        list.empty();
+        container.addClass("validation-summary-errors").removeClass("validation-summary-valid");
+
+        //container.addClass("fas").addClass("fa-exclamation-circle");
+        //class="fas fa-exclamation-circle"
+        
+
+        $.each(validator.errorList, function () {
+            $("<li />").html(this.message).appendTo(list);
+        });
+    }
+}

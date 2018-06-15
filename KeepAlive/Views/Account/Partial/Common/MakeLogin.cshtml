@@ -1,12 +1,13 @@
-﻿<div>
+﻿@using KeepAlive.Web.Utilities
+<div>
     @Ajax.ActionLink("Effettua l'accesso",
                                                   "Login", null,
-                                                  new AjaxOptions()
+                                                  new AccountAjaxOptions()
                                                   {
                                                       UpdateTargetId = "account",
                                                       InsertionMode = InsertionMode.Replace,
-                                                      HttpMethod = "GET",
-                                                      OnSuccess = "$.validator.unobtrusive.parse('#account');"
+                                                      HttpMethod = "GET"
+                                                      //OnSuccess = "$.validator.unobtrusive.parse('#account');"
                                                   },
                                                   new { })
 

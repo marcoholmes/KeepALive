@@ -1,6 +1,8 @@
 ﻿
 $(function () {
 
+    account.setCustomInvalidHandler();
+
     var $container = $('#account');
 
     $container.on("click", "#user-recovery", function () {
@@ -27,12 +29,11 @@ $(function () {
         })
     });
 
-
 });
 
 var account = {
 
-    success: function(data, status, xhr) {
+    success: function (data, status, xhr) {
         account.updateUI();
     },
 
@@ -41,9 +42,11 @@ var account = {
 
         //App.updateUI($elem);
         App.updateValidation($elem);
+    },
+
+    setCustomInvalidHandler: function () {
+        App.setCustomInvalidHandler();
     }
-
-
 };
 
 //var App = function () {
