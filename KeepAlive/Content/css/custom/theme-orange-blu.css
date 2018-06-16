@@ -39,13 +39,17 @@ div.alternate button:active {
   margin-bottom: 10px;
 }
 .validation-summary-errors {
-  padding: 15px;
+  padding: 0px 15px 15px 15px;
   margin-bottom: 24px;
   border: 1px solid transparent;
   border-radius: 4px;
   background-color: #ffeeca;
   border-color: #ffdebb;
   color: #f48132;
+}
+.validation-summary-errors ul {
+  margin-bottom: 0px;
+  padding-left: 0px;
 }
 .validation-summary-errors li {
   list-style-type: none;

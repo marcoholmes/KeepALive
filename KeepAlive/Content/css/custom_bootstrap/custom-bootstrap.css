@@ -6828,6 +6828,9 @@ body {
 .btn-default:focus {
   color: #fff;
 }
+.ul {
+  margin-bottom: 0px;
+}
 .field-validation-error {
   padding: .2em .6em .3em;
   font-size: 75%;

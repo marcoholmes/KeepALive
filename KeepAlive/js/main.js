@@ -58,13 +58,12 @@ function newInvalidHandler(event, validator) {
     if (list && list.length && validator.errorList.length) {
         list.empty();
         container.addClass("validation-summary-errors").removeClass("validation-summary-valid");
-
-        //container.addClass("fas").addClass("fa-exclamation-circle");
-        //class="fas fa-exclamation-circle"
         
+        list.prepend('<i class="fas fa-exclamation-circle"></i>');
 
         $.each(validator.errorList, function () {
             $("<li />").html(this.message).appendTo(list);
         });
+
     }
 }
